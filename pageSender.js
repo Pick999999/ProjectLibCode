@@ -56,14 +56,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         formData.append('path', pathName);
         formData.append('url', fullUrl);
         formData.append('zippedHtml', gzipBlob, fileName + '.gz'); // แนบไฟล์ zip ที่บีบอัดแล้ว
-        
+
         if (screenshotBlob) {
             // แนบไฟล์รูปภาพหน้าจอไปด้วยในชื่อฟิลด์ 'screenshot'
             formData.append('screenshot', screenshotBlob, fileName + '.png');
         }
 
         // 8. ระบุ Host URL ปลายทางที่ต้องการส่งข้อมูลไปเก็บ
-        const hostUrl = 'http://lovetoshopmall.com/api/savepagetolib'; // *** เปลี่ยนเป็น URL เซิร์ฟเวอร์จริงของคุณ ***
+        const hostUrl = 'http://lovetoshopmall.com/Derivtrade2026/ajaxphp/savepagetolib.php'; // *** เปลี่ยนเป็น URL เซิร์ฟเวอร์จริงของคุณ ***
 
         // 9. ทำการส่ง AJAX (Fetch POST) ข้อมูลทั้งหมดไปยังเซิร์ฟเวอร์
         const response = await fetch(hostUrl, {
